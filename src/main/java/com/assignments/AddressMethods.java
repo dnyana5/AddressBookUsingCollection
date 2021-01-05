@@ -2,6 +2,7 @@ package com.assignments;
 
 import java.util.Iterator;
 import java.util.LinkedHashSet;
+
 import java.util.Scanner;
 import java.util.Set;
 
@@ -108,6 +109,5 @@ public class AddressMethods {
 
         }
     }
-
 }
 
