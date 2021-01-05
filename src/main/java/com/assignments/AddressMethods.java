@@ -26,8 +26,8 @@ public class AddressMethods {
         }
     }
 
-    public void Edit() {
-        Scanner scanner= new Scanner(System.in);
+    void Edit() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the name whose deatils need to change  ");
         String name = scanner.nextLine();
         System.out.println("Enter the detail you have to edit");
@@ -97,5 +97,18 @@ public class AddressMethods {
             }
         }
     }
+
+    void Delete() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the Name whose data to delete");
+        String name = scanner.nextLine();
+        for (int i = 0; i < addressBook.size(); i++) {
+            if (addressBook.get(i).getFirst_Name().equalsIgnoreCase(name)) {
+                addressBook.remove(i);
+            }
+        }
+    }
 }
+
+
 
