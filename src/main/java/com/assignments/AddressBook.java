@@ -6,5 +6,7 @@ public class AddressBook {
         AddressMethods address=new AddressMethods();
         address.Add();
         address.Show();
+        address.Edit();
+        address.Show();
     }
 }
