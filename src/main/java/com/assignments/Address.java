@@ -1,4 +1,4 @@
-package com.assignment;
+package com.assignments;
 
 import java.util.Scanner;
 
@@ -11,6 +11,7 @@ public class Address {
     private String Zip;
     private String Phone_Number;
     private String Email;
+
     Address() {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the first name");
