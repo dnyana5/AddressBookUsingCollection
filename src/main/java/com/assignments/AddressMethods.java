@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class AddressMethods {
+
     Set<Address> addressBook = new LinkedHashSet<Address>();
 
     void Add() {
@@ -33,6 +34,7 @@ public class AddressMethods {
             System.out.println("Email - " + address.getEmail());
         }
     }
+
     void Show(List<Address> addressBook) {
         Iterator<Address> itr = addressBook.iterator();
         while (itr.hasNext()) {
@@ -130,9 +132,9 @@ public class AddressMethods {
         List<String> sortedNames = sorted.collect(Collectors.toList());
 
         List<Address> sortedAddressBook = new ArrayList<Address>();
-        for(String sortedName : sortedNames) {
+        for (String sortedName : sortedNames) {
             for (Address iterator : addressBook) {
-                if(sortedName.equals(iterator.getFirst_Name()))
+                if (sortedName.equals(iterator.getFirst_Name()))
                     sortedAddressBook.add(iterator);
             }
         }
@@ -140,5 +142,62 @@ public class AddressMethods {
         Show(sortedAddressBook);
     }
 
-}
+    public void sortByCity() {
 
+        List<String> unsortedArrayCity = new ArrayList<>();
+        for (Address iterator : addressBook) {
+            unsortedArrayCity.add(iterator.getCity());
+        }
+        Stream<String> sorted = unsortedArrayCity.stream().sorted();
+        List<String> sortedCity = sorted.collect(Collectors.toList());
+
+        List<Address> sortedAddressBook = new ArrayList<Address>();
+        for (String sortedCitys : sortedCity) {
+            for (Address iterator : addressBook) {
+                if (sortedCitys.equals(iterator.getCity()))
+                    sortedAddressBook.add(iterator);
+            }
+        }
+
+        Show(sortedAddressBook);
+    }
+
+    public void sortByState() {
+
+        List<String> unsortedArrayState = new ArrayList<>();
+        for (Address iterator : addressBook) {
+            unsortedArrayState.add(iterator.getState());
+        }
+        Stream<String> sorted = unsortedArrayState.stream().sorted();
+        List<String> sortedState = sorted.collect(Collectors.toList());
+
+        List<Address> sortedAddressBook = new ArrayList<Address>();
+        for (String sortedStates : sortedState) {
+            for (Address iterator : addressBook) {
+                if (sortedStates.equals(iterator.getState()))
+                    sortedAddressBook.add(iterator);
+            }
+        }
+
+        Show(sortedAddressBook);
+    }
+    public void sortByZip() {
+
+        List<String> unsortedArrayZip = new ArrayList<>();
+        for (Address iterator : addressBook) {
+            unsortedArrayZip.add(iterator.getZip());
+        }
+        Stream<String> sorted = unsortedArrayZip.stream().sorted();
+        List<String> sortedZip = sorted.collect(Collectors.toList());
+
+        List<Address> sortedAddressBook = new ArrayList<Address>();
+        for (String sortedZips : sortedZip) {
+            for (Address iterator : addressBook) {
+                if (sortedZips.equals(iterator.getZip()))
+                    sortedAddressBook.add(iterator);
+            }
+        }
+
+        Show(sortedAddressBook);
+    }
+}
