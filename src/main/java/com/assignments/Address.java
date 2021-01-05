@@ -1,7 +1,6 @@
 package com.assignments;
 
 import java.util.Scanner;
-
 public class Address {
     private String First_Name;
     private String Last_Name;

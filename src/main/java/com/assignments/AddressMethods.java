@@ -5,7 +5,6 @@ import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-
 public class AddressMethods {
     // ArrayList<Address> addressBook = new ArrayList<Address>();
     Set<Address> addressBook = new LinkedHashSet<Address>();
@@ -109,6 +108,6 @@ public class AddressMethods {
 
         }
     }
-}
 
+}
 
